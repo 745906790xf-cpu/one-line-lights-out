@@ -12,6 +12,7 @@ cursor blinking where he stopped -- never in announced grief.
 import os
 
 MAX_CHARS = 200
+ENTRY_PATH = "/output/entry.txt"
 
 LINE = "He just closed the lid. I'm still holding his unsent message. Three words, no punctuation, cursor blinking where he stopped."
 
@@ -40,7 +41,7 @@ def check_line(line: str) -> str:
     return line
 
 
-def write_entry(path: str = "/output/entry.txt") -> None:
+def write_entry(path: str = ENTRY_PATH) -> None:
     """Write the line as UTF-8 with no trailing newline, then verify it.
 
     Read back what was written and compare bytes, so a partial write
